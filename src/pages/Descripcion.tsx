@@ -30,7 +30,7 @@ export const Descripcion = () => {
                 <p className="mt-4 text-justify">{hotel.descripcion}</p>
 
                 <div className="flex justify-between mt-4">
-                <span className="text-yellow-800">{hotel.starring} estrellas</span>
+                <span className="text-red-800">{hotel.starring} estrellas</span>
                 <p className="mr-4 font-bold">${hotel.price}</p>
                 </div>
                 
