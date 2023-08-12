@@ -5,6 +5,7 @@ import { Hotels } from "./pages/Hotels";
 import { Flights } from "./pages/Flights";
 import { Foods } from "./pages/Foods";
 import { Transports } from "./pages/Transports";
+import { Descripcion } from "./pages/Descripcion";
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
             <Route
               path="/transports"
               element={<Transports />}></Route>
+               <Route
+              path="/descripcion"
+              element={<Descripcion/>}></Route>
           
           </Routes>
           </div>

@@ -1,31 +1,16 @@
+import {useEffect, useState} from "react";
 import { Title } from "../components/Title"
 
+
+
 export const Hotels = () => {
-  let hotels = [
-    {
-      name: 'Seminoles Hotel',
-      starring: 4,
-      price: 100,
-      image: 'images/hotels/seminole.jpg'
-    },
-    {
-      name: 'Princess Hilton',
-      starring: 4.5,
-      price: 125,
-      image: 'images/hotels/hilton.jpg'
-    },
-    {
-      name: 'Express Holiday Inn',
-      starring: 4.5,
-      price: 125,
-      image: 'images/hotels/express.jpg'
-    },{
-      name: 'Crown Plaza',
-      starring: 3.9,
-      price: 95,
-      image: 'images/hotels/crown.jpg'
-    },
-  ]
+  const [hotels, setHotels] = useState([]);
+  useEffect(() => {
+    fetch('https://api-tests.workingpos.com/api/go-traveling/hotels')
+  .then((response) => response.json())
+  .then((datos) => setHotels(datos.data));
+  }, []);
+
   return (
     <div >
        <Title texto="Busca un hotel cerca de ti" />
